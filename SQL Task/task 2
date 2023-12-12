@@ -1,0 +1,1 @@
+SELECT catalog_product_entity.sku, catalog_product_entity.created_at AS product_creation_date FROM catalog_product_entity LEFT JOIN sales_order_item ON catalog_product_entity.entity_id = sales_order_item.product_id WHERE catalog_product_entity.created_at < NOW() - INTERVAL 1 MONTH AND sales_order_item.order_id IS NULL;

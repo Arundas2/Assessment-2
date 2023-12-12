@@ -1,0 +1,1 @@
+SELECT main.increment_id AS order_increment_id, GROUP_CONCAT(items.sku) AS ordered_skus FROM sales_order AS main INNER JOIN sales_order_item AS items ON main.entity_id = items.order_id GROUP BY main.entity_id;

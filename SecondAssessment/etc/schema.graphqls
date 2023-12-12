@@ -1,0 +1,17 @@
+type Mutation {
+    addToCart(input: AddToCartInput!): AddToCartOutput @resolver(class: "Ceymox\\SecondAssessment\\Model\\Resolver\\AddToCart") @doc(description: "Add a product to the cart with restrictions.")
+}
+
+input AddToCartInput {
+    cart_id: String
+    cart_items: [CartItemInput!]!
+}
+
+input CartItemInput {
+    sku: String!
+    quantity: Float!
+}
+
+type AddToCartOutput {
+    cart: Cart @doc(description: "The updated shopping cart.")
+}
