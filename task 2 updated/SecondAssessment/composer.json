@@ -1,0 +1,17 @@
+{
+    "name": "ceymox/secondassessment",
+    "description": "Second Assessment",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "Commercial"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Ceymox\\SecondAssessment\\": ""
+        }
+    }
+}
